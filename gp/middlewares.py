@@ -13,9 +13,9 @@ class ChromeDownloaderMiddleware(object):
 
     def __init__(self):
         options = webdriver.ChromeOptions()
-        options.add_argument('--headless')  # 设置无界面
-        if CHROME_PATH:
-            options.binary_location = CHROME_PATH
+        #options.add_argument('--headless')  # 设置无界面
+        # if CHROME_PATH:
+        #     options.binary_location = CHROME_PATH
         if CHROME_DRIVER_PATH:
             self.driver = webdriver.Chrome(chrome_options=options, executable_path=CHROME_DRIVER_PATH)  # 初始化Chrome驱动
         else:
